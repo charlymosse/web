@@ -13,17 +13,17 @@ export default function Manifesto() {
 
           <FadeIn delay={1}>
             <p className="font-fraunces text-2xl md:text-3xl lg:text-4xl text-tinta-100 leading-[1.3] mb-8">
-              Tu empresa creció. Lo que antes funcionaba con tres planillas y buena memoria, ahora
-              se cae cada vez que alguien se va de vacaciones.
+              Tu empresa creció, pero la operación no creció con ella. Seguís dependiendo de
+              planillas desactualizadas, procesos que solo sabe hacer una persona y reportes
+              que toman horas en armar.
             </p>
           </FadeIn>
 
           <FadeIn delay={2}>
             <p className="font-inter text-base md:text-lg text-tinta-400 leading-relaxed">
-              Hay información dispersa en mails, WhatsApps y Excels. Nadie sabe del todo cómo se
-              hace cada cosa. Sumás gente y el caos crece. Querés ordenar pero no tenés tiempo, y
-              los consultores tradicionales te entregan diagnósticos lindos que después tenés que
-              ejecutar vos.
+              La información está dispersa en mails, WhatsApps y Excels. Los procesos son
+              informales. Cuando alguien falta, el trabajo se traba. Y no es falta de
+              herramientas: es falta de sistema.
             </p>
           </FadeIn>
         </div>

@@ -9,17 +9,18 @@ export default function Hero() {
           {/* Texto */}
           <div className="max-w-2xl">
             <p className="font-inter text-xs text-tinta-400 tracking-label uppercase mb-10">
-              Consultoría de Operaciones y Automatización
+              Consultoría de Operaciones · Automatización · Sistemas
             </p>
 
             <h1 className="font-fraunces text-4xl md:text-6xl lg:text-7xl text-tinta-100 leading-[1.08] tracking-tight mb-8">
-              Convierto operaciones caóticas en{' '}
-              <em className="text-ocre not-italic italic">sistemas que escalan.</em>
+              Transformo procesos manuales en{' '}
+              <em className="text-ocre italic">sistemas que operan solos.</em>
             </h1>
 
             <p className="font-inter text-lg md:text-xl text-tinta-400 leading-relaxed max-w-xl mb-12">
-              Ayudo a founders de empresas que crecieron rápido a ordenar su operación con sistemas,
-              datos y automatización. No vendo PowerPoints: construyo lo que diseño.
+              Trabajo con founders y equipos operativos para ordenar operaciones, automatizar
+              tareas repetitivas y construir sistemas de reporting, seguimiento y control.
+              Herramientas reales. Sin PowerPoints.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -29,10 +30,10 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="font-inter text-sm font-medium bg-tinta-100 text-crema-100 px-7 py-3.5 rounded-sm hover:bg-ocre transition-colors text-center"
               >
-                Agendar una llamada
+                Hablemos de tu operación
               </a>
               <a
-                href="#enfoque"
+                href="#como-trabajo"
                 className="font-inter text-sm font-medium text-tinta-100 border border-tinta-300 px-7 py-3.5 rounded-sm hover:border-tinta-100 transition-colors text-center"
               >
                 Ver cómo trabajo
