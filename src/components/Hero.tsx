@@ -9,18 +9,17 @@ export default function Hero() {
           {/* Texto */}
           <div className="max-w-2xl">
             <p className="font-inter text-xs text-tinta-400 tracking-label uppercase mb-10">
-              Consultoría de Operaciones · Automatización · Sistemas
+              Consultoría de Operaciones · Sistemas · Workflows
             </p>
 
             <h1 className="font-fraunces text-4xl md:text-6xl lg:text-7xl text-tinta-100 leading-[1.08] tracking-tight mb-8">
-              Transformo procesos manuales en{' '}
-              <em className="text-ocre italic">sistemas que operan solos.</em>
+              Empresas que crecieron más rápido que sus procesos.{' '}
+              <em className="text-ocre italic">Eso se puede resolver.</em>
             </h1>
 
             <p className="font-inter text-lg md:text-xl text-tinta-400 leading-relaxed max-w-xl mb-12">
-              Trabajo con founders y equipos operativos para ordenar operaciones, automatizar
-              tareas repetitivas y construir sistemas de reporting, seguimiento y control.
-              Herramientas reales. Sin PowerPoints.
+              Trabajo con founders y equipos operativos para ordenar la operación, conectar la
+              información y construir sistemas que le dan visibilidad real al negocio.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">

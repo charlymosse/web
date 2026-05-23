@@ -1,7 +1,7 @@
 import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import Manifesto from '@/components/Manifesto'
-import Enfoque from '@/components/Enfoque'
+import Vision from '@/components/Vision'
 import ComoTrabajo from '@/components/ComoTrabajo'
 import Casos from '@/components/Casos'
 import Servicios from '@/components/Servicios'
@@ -17,7 +17,7 @@ export default function Home() {
       <main>
         <Hero />
         <Manifesto />
-        <Enfoque />
+        <Vision />
         <ComoTrabajo />
         <Casos />
         <Servicios />

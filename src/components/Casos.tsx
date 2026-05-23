@@ -6,43 +6,49 @@ import FadeIn from './FadeIn'
 const casos = [
   {
     industria: 'Diseño de interiores',
-    titulo: 'Sistema centralizado de gestión operativa para estudio con múltiples proyectos en paralelo.',
+    titulo: 'Visibilidad operativa para estudio con múltiples proyectos en paralelo.',
     contexto: 'Estudio con proyectos personalizados, coordinación de proveedores y seguimiento de entregas simultáneas.',
     problema:
-      'La operación dependía de planillas separadas que nadie mantenía del todo actualizadas. Proveedores, estados de entrega y costos vivían en documentos distintos, lo que generaba errores de coordinación y mucho tiempo de seguimiento manual.',
+      'La coordinación de proyectos dependía de planillas separadas que nadie podía mantener actualizadas al mismo tiempo. Proveedores, estados de entrega y costos vivían en lugares distintos.',
     solucion:
-      'Diseñé e implementé un sistema centralizado de seguimiento operativo: estados automatizados por proyecto, control de proveedores con alertas, visibilidad de costos y entregas en tiempo real. Construido en Google Sheets con lógica de automatización vía Apps Script.',
+      'Centralicé toda la operación en un único lugar: seguimiento de proyectos, coordinación con proveedores y control de entregas con actualización automática de estados.',
+    impacto:
+      'El equipo dejó de coordinar por WhatsApp y pasó a tener visibilidad operativa completa desde un solo lugar.',
     metricas: [
-      { valor: '1', label: 'Sistema en lugar de múltiples planillas' },
+      { valor: '1', label: 'Fuente única para toda la operación' },
       { valor: 'Auto', label: 'Actualización de estados por proyecto' },
       { valor: 'Menor', label: 'Dependencia de seguimiento manual' },
     ],
   },
   {
     industria: 'Búsqueda de talento',
-    titulo: 'Dashboard operativo y reporting automático para equipo de selección ejecutiva.',
+    titulo: 'Seguimiento centralizado y reportes automáticos para equipo de selección ejecutiva.',
     contexto: 'Empresa de búsqueda con varios procesos activos, métricas de equipo y reporte periódico a clientes.',
     problema:
-      'La información de los procesos estaba fragmentada. El reporte a clientes se armaba manualmente cada semana, sin métricas consistentes ni visibilidad del pipeline. Las decisiones dependían de lo que cada persona recordaba.',
+      'Los reportes para clientes se armaban manualmente cada semana, sin métricas consistentes ni visibilidad del proceso. Las decisiones dependían de lo que cada persona recordaba.',
     solucion:
-      'Implementé un sistema de seguimiento centralizado: dashboard con estado de cada búsqueda, métricas por recruiter y etapa, y reportes automáticos para clientes generados desde la misma base de datos. Integración entre Google Sheets, SQL y Apps Script.',
+      'Construí un seguimiento centralizado con métricas por etapa y reportes generados automáticamente desde la misma base de datos, sin intervención del equipo.',
+    impacto:
+      'El tiempo dedicado a preparar reportes se redujo un 60% y el equipo ganó visibilidad completa sobre cada proceso activo.',
     metricas: [
       { valor: '−60%', label: 'Tiempo en preparar reportes de clientes' },
       { valor: '1', label: 'Fuente de datos para todo el equipo' },
-      { valor: 'Semanal', label: 'Reporting automático sin intervención' },
+      { valor: 'Semanal', label: 'Reporte automático sin intervención' },
     ],
   },
   {
     industria: 'Gastronomía',
-    titulo: 'Diseño de sistema de visibilidad operativa y financiera para operación gastronómica.',
-    contexto: 'Operación gastronómica con múltiples frentes de gestión, sin visibilidad consolidada sobre costos, ventas ni inventario.',
+    titulo: 'Información operativa y financiera unificada para gestión gastronómica.',
+    contexto: 'Operación con múltiples frentes de gestión, sin visibilidad consolidada sobre costos, ventas ni resultados.',
     problema:
-      'Los reportes de gestión se preparaban manualmente con información parcial. Sin integración entre sistemas, cada área operaba con su propia versión de los datos, lo que dificultaba la toma de decisiones.',
+      'Sin integración entre fuentes de información, cada área operaba con su propia versión de los datos y los reportes llegaban tarde o incompletos.',
     solucion:
-      'Diseño de sistema de consolidación de información operativa y financiera: integración con fuentes de datos externas vía API, dashboard ejecutivo con indicadores clave y reporting automático para la dirección.',
+      'Diseñé un esquema de consolidación con integración de fuentes externas y un seguimiento de gestión actualizado automáticamente para la dirección.',
+    impacto:
+      'La dirección pasó a tener información operativa y financiera unificada sin depender de armados manuales.',
     metricas: [
       { valor: 'Unificada', label: 'Información operativa y financiera' },
-      { valor: 'Automático', label: 'Reporting de gestión' },
+      { valor: 'Automático', label: 'Reporte de gestión' },
       { valor: 'Mayor', label: 'Visibilidad para tomar decisiones' },
     ],
   },
@@ -88,21 +94,36 @@ export default function Casos() {
             <p className="font-inter text-xs text-tinta-500 uppercase tracking-label mb-5">
               {caso.contexto}
             </p>
-            <h2 className="font-fraunces text-2xl md:text-3xl text-tinta-100 leading-tight mb-8">
+            <h2 className="font-fraunces text-2xl md:text-3xl text-tinta-100 leading-tight mb-10">
               {caso.titulo}
             </h2>
-            <p className="font-inter text-xs text-tinta-500 uppercase tracking-label mb-3">
-              El problema
-            </p>
-            <p className="font-inter text-base text-tinta-400 leading-relaxed mb-8">
-              {caso.problema}
-            </p>
-            <p className="font-inter text-xs text-tinta-500 uppercase tracking-label mb-3">
-              La solución
-            </p>
-            <p className="font-inter text-base text-tinta-400 leading-relaxed">
-              {caso.solucion}
-            </p>
+
+            <div className="space-y-6">
+              <div className="border-l border-crema-300 pl-5">
+                <p className="font-inter text-xs text-tinta-500 uppercase tracking-label mb-2">
+                  Problema
+                </p>
+                <p className="font-inter text-base text-tinta-400 leading-relaxed">
+                  {caso.problema}
+                </p>
+              </div>
+              <div className="border-l border-crema-300 pl-5">
+                <p className="font-inter text-xs text-tinta-500 uppercase tracking-label mb-2">
+                  Solución
+                </p>
+                <p className="font-inter text-base text-tinta-400 leading-relaxed">
+                  {caso.solucion}
+                </p>
+              </div>
+              <div className="border-l-2 border-ocre pl-5">
+                <p className="font-inter text-xs text-tinta-500 uppercase tracking-label mb-2">
+                  Impacto
+                </p>
+                <p className="font-inter text-base text-tinta-200 leading-relaxed font-medium">
+                  {caso.impacto}
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Métricas + CTA */}

@@ -2,20 +2,16 @@ import FadeIn from './FadeIn'
 
 const categorias = [
   {
-    nombre: 'Datos y planillas',
-    herramientas: ['Google Sheets', 'Airtable', 'SQL / MySQL'],
-  },
-  {
-    nombre: 'Automatización',
+    nombre: 'Automatización y workflows',
     herramientas: ['Apps Script', 'APIs REST', 'n8n / Zapier'],
   },
   {
-    nombre: 'Reportes y dashboards',
-    herramientas: ['Looker Studio', 'Google Data Studio', 'Dashboards custom'],
+    nombre: 'Información y visibilidad',
+    herramientas: ['Google Sheets', 'Airtable', 'Looker Studio'],
   },
   {
-    nombre: 'AI aplicada',
-    herramientas: ['AI en procesos repetitivos', 'Clasificación automática', 'Resumen y extracción'],
+    nombre: 'Sistemas y organización',
+    herramientas: ['SQL / MySQL', 'Dashboards custom', 'AI aplicada a procesos'],
   },
 ]
 
@@ -31,16 +27,20 @@ export default function Stack() {
               <p className="font-inter text-xs text-tinta-400 tracking-label uppercase mb-6">
                 Herramientas
               </p>
-              <p className="font-fraunces text-2xl md:text-3xl text-tinta-100 leading-snug">
-                Las herramientas que uso. Sin hype, sin dependencia de una sola plataforma.
+              <p className="font-fraunces text-2xl md:text-3xl text-tinta-100 leading-snug mb-6">
+                Herramientas que potencian los sistemas.
+              </p>
+              <p className="font-inter text-sm text-tinta-400 leading-relaxed">
+                No creo en implementar herramientas porque sí. Las herramientas son el medio.
+                El objetivo es que la operación funcione mejor.
               </p>
             </FadeIn>
           </div>
 
           {/* Grid de categorías */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-crema-300">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-crema-300">
             {categorias.map((cat, i) => (
-              <FadeIn key={cat.nombre} delay={(i % 2 + 1) as 1 | 2}>
+              <FadeIn key={cat.nombre} delay={(i % 3 + 1) as 1 | 2 | 3}>
                 <div className="bg-crema-100 p-8">
                   <p className="font-inter text-xs text-tinta-500 tracking-label uppercase mb-4">
                     {cat.nombre}
