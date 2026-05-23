@@ -5,45 +5,45 @@ import FadeIn from './FadeIn'
 
 const casos = [
   {
-    tipo: 'Coordinación operativa',
-    titulo: 'De seguimiento manual disperso a visibilidad operativa centralizada.',
-    contexto: 'Empresa de servicios con proyectos personalizados, múltiples proveedores y entregas en paralelo.',
+    industria: 'Diseño de interiores',
+    titulo: 'Sistema centralizado de gestión operativa para estudio con múltiples proyectos en paralelo.',
+    contexto: 'Estudio con proyectos personalizados, coordinación de proveedores y seguimiento de entregas simultáneas.',
     problema:
-      'Cada área manejaba su propia versión de la información en planillas separadas. Sin visibilidad consolidada, el seguimiento dependía de personas específicas y los errores se acumulaban entre etapas.',
+      'La operación dependía de planillas separadas que nadie mantenía del todo actualizadas. Proveedores, estados de entrega y costos vivían en documentos distintos, lo que generaba errores de coordinación y mucho tiempo de seguimiento manual.',
     solucion:
-      'Diseñé un sistema centralizado de gestión operativa: seguimiento de proyectos, control de proveedores y costos, alertas automáticas por estado y reporte periódico para la dirección. Una sola fuente de información para todo el equipo.',
+      'Diseñé e implementé un sistema centralizado de seguimiento operativo: estados automatizados por proyecto, control de proveedores con alertas, visibilidad de costos y entregas en tiempo real. Construido en Google Sheets con lógica de automatización vía Apps Script.',
     metricas: [
-      { valor: '1', label: 'Sistema centralizado de información' },
-      { valor: '−40%', label: 'Horas de seguimiento manual' },
-      { valor: 'Alta', label: 'Trazabilidad operativa' },
+      { valor: '1', label: 'Sistema en lugar de múltiples planillas' },
+      { valor: 'Auto', label: 'Actualización de estados por proyecto' },
+      { valor: 'Menor', label: 'Dependencia de seguimiento manual' },
     ],
   },
   {
-    tipo: 'Pipeline y reporting',
-    titulo: 'Visibilidad en tiempo real sobre procesos activos y resultados del equipo.',
-    contexto: 'Empresa de servicios profesionales con alto volumen de procesos simultáneos y reporte periódico a clientes.',
+    industria: 'Búsqueda de talento',
+    titulo: 'Dashboard operativo y reporting automático para equipo de selección ejecutiva.',
+    contexto: 'Empresa de búsqueda con varios procesos activos, métricas de equipo y reporte periódico a clientes.',
     problema:
-      'Los reportes se preparaban manualmente y llegaban tarde para la toma de decisiones. No había visibilidad centralizada del estado de cada proceso ni métricas de rendimiento del equipo.',
+      'La información de los procesos estaba fragmentada. El reporte a clientes se armaba manualmente cada semana, sin métricas consistentes ni visibilidad del pipeline. Las decisiones dependían de lo que cada persona recordaba.',
     solucion:
-      'Implementé un sistema de seguimiento con dashboards por estado, métricas de proceso y reportes automáticos para clientes y dirección. Migración progresiva sin interrumpir la operación diaria.',
+      'Implementé un sistema de seguimiento centralizado: dashboard con estado de cada búsqueda, métricas por recruiter y etapa, y reportes automáticos para clientes generados desde la misma base de datos. Integración entre Google Sheets, SQL y Apps Script.',
     metricas: [
-      { valor: '−70%', label: 'Tiempo en preparar reportes' },
-      { valor: 'Automático', label: 'Reporting a clientes' },
-      { valor: '1', label: 'Fuente de verdad para el equipo' },
+      { valor: '−60%', label: 'Tiempo en preparar reportes de clientes' },
+      { valor: '1', label: 'Fuente de datos para todo el equipo' },
+      { valor: 'Semanal', label: 'Reporting automático sin intervención' },
     ],
   },
   {
-    tipo: 'Consolidación de información',
-    titulo: 'Reportes automáticos y visibilidad operativa donde antes había dispersión.',
-    contexto: 'Empresa con múltiples áreas de gestión que operaban de forma aislada, sin consolidación de datos.',
+    industria: 'Gastronomía',
+    titulo: 'Diseño de sistema de visibilidad operativa y financiera para operación gastronómica.',
+    contexto: 'Operación gastronómica con múltiples frentes de gestión, sin visibilidad consolidada sobre costos, ventas ni inventario.',
     problema:
-      'Los reportes de gestión se armaban a mano, con información incompleta y con demora. No había visibilidad cruzada entre áreas y las decisiones dependían de datos desactualizados.',
+      'Los reportes de gestión se preparaban manualmente con información parcial. Sin integración entre sistemas, cada área operaba con su propia versión de los datos, lo que dificultaba la toma de decisiones.',
     solucion:
-      'Diseñé un sistema de consolidación automática de información operativa y financiera. Dashboard ejecutivo con indicadores clave, reportes automáticos periódicos y eliminación de carga manual recurrente.',
+      'Diseño de sistema de consolidación de información operativa y financiera: integración con fuentes de datos externas vía API, dashboard ejecutivo con indicadores clave y reporting automático para la dirección.',
     metricas: [
-      { valor: 'Semanal', label: 'Reporting sin intervención manual' },
-      { valor: 'Unificada', label: 'Visibilidad sobre el negocio' },
-      { valor: 'Menor', label: 'Dependencia de personas clave' },
+      { valor: 'Unificada', label: 'Información operativa y financiera' },
+      { valor: 'Automático', label: 'Reporting de gestión' },
+      { valor: 'Mayor', label: 'Visibilidad para tomar decisiones' },
     ],
   },
 ]
@@ -66,7 +66,7 @@ export default function Casos() {
           <div className="flex flex-wrap gap-2 mb-14">
             {casos.map((c, i) => (
               <button
-                key={c.tipo}
+                key={c.industria}
                 onClick={() => setActive(i)}
                 className={`font-inter text-sm px-4 py-2 rounded-sm transition-colors ${
                   active === i
@@ -74,7 +74,7 @@ export default function Casos() {
                     : 'text-tinta-400 border border-crema-300 hover:border-tinta-400'
                 }`}
               >
-                {c.tipo}
+                {c.industria}
               </button>
             ))}
           </div>
@@ -85,21 +85,21 @@ export default function Casos() {
 
           {/* Narrativa */}
           <div>
-            <p className="font-inter text-xs text-tinta-500 uppercase tracking-label mb-4">
+            <p className="font-inter text-xs text-tinta-500 uppercase tracking-label mb-5">
               {caso.contexto}
             </p>
             <h2 className="font-fraunces text-2xl md:text-3xl text-tinta-100 leading-tight mb-8">
               {caso.titulo}
             </h2>
-            <div className="space-y-1 mb-6">
-              <p className="font-inter text-xs text-tinta-500 uppercase tracking-label">El problema</p>
-            </div>
+            <p className="font-inter text-xs text-tinta-500 uppercase tracking-label mb-3">
+              El problema
+            </p>
             <p className="font-inter text-base text-tinta-400 leading-relaxed mb-8">
               {caso.problema}
             </p>
-            <div className="space-y-1 mb-4">
-              <p className="font-inter text-xs text-tinta-500 uppercase tracking-label">La solución</p>
-            </div>
+            <p className="font-inter text-xs text-tinta-500 uppercase tracking-label mb-3">
+              La solución
+            </p>
             <p className="font-inter text-base text-tinta-400 leading-relaxed">
               {caso.solucion}
             </p>
@@ -110,7 +110,9 @@ export default function Casos() {
             <div className="grid grid-cols-3 gap-px bg-crema-300 mb-8">
               {caso.metricas.map((m) => (
                 <div key={m.label} className="bg-crema-200 p-6 text-center">
-                  <p className="font-fraunces text-2xl md:text-3xl text-ocre mb-2 leading-tight">{m.valor}</p>
+                  <p className="font-fraunces text-2xl md:text-3xl text-ocre mb-2 leading-tight">
+                    {m.valor}
+                  </p>
                   <p className="font-inter text-xs text-tinta-400 leading-snug">{m.label}</p>
                 </div>
               ))}

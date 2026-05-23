@@ -27,21 +27,24 @@ export default function SobreMi() {
                 — Sobre mí
               </p>
               <p className="font-fraunces text-2xl md:text-3xl text-tinta-100 leading-[1.3] mb-8">
-                Soy Charly. Llevo años trabajando en la intersección entre operaciones, datos y
-                tecnología.
+                Soy Charly. Pasé años liderando operaciones a escala antes de trabajar de forma
+                independiente.
               </p>
             </FadeIn>
 
             <FadeIn delay={2}>
               <p className="font-inter text-base text-tinta-400 leading-relaxed mb-6">
-                Lideré equipos en recruiting, operaciones, fraude y reporting. Diseñé pipelines,
-                dashboards y sistemas internos para empresas que necesitaban dejar de operar a
-                pulmón.
+                Durante más de seis años lideré equipos de operaciones globales en TheFork
+                (TripAdvisor): calidad, fraude, onboarding y administración en 12 mercados con
+                equipos de más de 30 personas. Ahí diseñé procesos, automaticé workflows y
+                construí sistemas de reporting que redujeron trabajo manual y mejoraron la
+                visibilidad del negocio.
               </p>
               <p className="font-inter text-base text-tinta-400 leading-relaxed mb-10">
-                Hoy hago lo mismo como consultor independiente: pienso el sistema, lo construyo, y
-                me voy cuando ya no me necesitan. Trabajo desde Buenos Aires con clientes en toda
-                Latam.
+                Hoy aplico esa misma lógica como consultor independiente. Trabajo con founders y
+                equipos operativos que necesitan lo que las empresas grandes ya tienen: sistemas
+                que funcionan, datos centralizados y automatización que realmente ahorra tiempo.
+                Desde Buenos Aires, con clientes en toda Latam.
               </p>
             </FadeIn>
 

@@ -37,7 +37,8 @@
       "Bash(/opt/homebrew/bin/vercel --version)",
       "Bash(npx vercel *)",
       "Bash(dig NS charlymosse.com.ar +short)",
-      "Bash(nslookup -type=NS charlymosse.com.ar)"
+      "Bash(nslookup -type=NS charlymosse.com.ar)",
+      "WebFetch(domain:www.linkedin.com)"
     ]
   }
 }
