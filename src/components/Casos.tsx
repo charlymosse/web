@@ -5,42 +5,45 @@ import FadeIn from './FadeIn'
 
 const casos = [
   {
-    industria: 'Diseño e interiorismo',
-    titulo: 'De seis planillas dispersas a un sistema operativo centralizado.',
-    parrafos: [
-      'La empresa gestionaba proyectos, proveedores, costos y entregas en planillas separadas que nadie mantenía actualizadas. Cada consulta requería revisar múltiples fuentes.',
-      'Diseñé e implementé un sistema centralizado de gestión operativa: seguimiento de proyectos en tiempo real, control de proveedores y costos integrado, y reportes automáticos para la dirección.',
-    ],
+    tipo: 'Coordinación operativa',
+    titulo: 'De seguimiento manual disperso a visibilidad operativa centralizada.',
+    contexto: 'Empresa de servicios con proyectos personalizados, múltiples proveedores y entregas en paralelo.',
+    problema:
+      'Cada área manejaba su propia versión de la información en planillas separadas. Sin visibilidad consolidada, el seguimiento dependía de personas específicas y los errores se acumulaban entre etapas.',
+    solucion:
+      'Diseñé un sistema centralizado de gestión operativa: seguimiento de proyectos, control de proveedores y costos, alertas automáticas por estado y reporte periódico para la dirección. Una sola fuente de información para todo el equipo.',
     metricas: [
-      { valor: '−70%', label: 'Seguimiento manual' },
-      { valor: '6→1', label: 'Fuentes de datos' },
-      { valor: '+15h', label: 'Recuperadas por semana' },
+      { valor: '1', label: 'Sistema centralizado de información' },
+      { valor: '−40%', label: 'Horas de seguimiento manual' },
+      { valor: 'Alta', label: 'Trazabilidad operativa' },
     ],
   },
   {
-    industria: 'Recruiting ejecutivo',
-    titulo: 'De planillas dispersas a un sistema operativo unificado.',
-    parrafos: [
-      'Diseñé y construí el sistema interno de gestión de búsquedas: pipeline de candidatos, métricas de proceso, reporting automático para clientes y dashboards ejecutivos. Migración progresiva sin frenar la operación del día a día.',
-      'Hoy el equipo opera sobre una única fuente de verdad, con visibilidad en tiempo real del estado de cada búsqueda. Los reportes que antes tomaban horas se generan solos.',
-    ],
+    tipo: 'Pipeline y reporting',
+    titulo: 'Visibilidad en tiempo real sobre procesos activos y resultados del equipo.',
+    contexto: 'Empresa de servicios profesionales con alto volumen de procesos simultáneos y reporte periódico a clientes.',
+    problema:
+      'Los reportes se preparaban manualmente y llegaban tarde para la toma de decisiones. No había visibilidad centralizada del estado de cada proceso ni métricas de rendimiento del equipo.',
+    solucion:
+      'Implementé un sistema de seguimiento con dashboards por estado, métricas de proceso y reportes automáticos para clientes y dirección. Migración progresiva sin interrumpir la operación diaria.',
     metricas: [
-      { valor: '−85%', label: 'Tiempo de reporting' },
-      { valor: '12+', label: 'Procesos automatizados' },
-      { valor: '1', label: 'Fuente única de verdad' },
+      { valor: '−70%', label: 'Tiempo en preparar reportes' },
+      { valor: 'Automático', label: 'Reporting a clientes' },
+      { valor: '1', label: 'Fuente de verdad para el equipo' },
     ],
   },
   {
-    industria: 'Gastronomía',
-    titulo: 'Visibilidad en tiempo real sobre costos, stock y ventas por sucursal.',
-    parrafos: [
-      'La empresa operaba tres sucursales sin visibilidad consolidada de costos, stock ni ventas. Los reportes se armaban a mano cada semana y llegaban tarde para tomar decisiones.',
-      'Implementé un sistema de control integrado por sucursal: carga unificada, conciliación automática y un dashboard ejecutivo con los indicadores clave del negocio actualizado diariamente.',
-    ],
+    tipo: 'Consolidación de información',
+    titulo: 'Reportes automáticos y visibilidad operativa donde antes había dispersión.',
+    contexto: 'Empresa con múltiples áreas de gestión que operaban de forma aislada, sin consolidación de datos.',
+    problema:
+      'Los reportes de gestión se armaban a mano, con información incompleta y con demora. No había visibilidad cruzada entre áreas y las decisiones dependían de datos desactualizados.',
+    solucion:
+      'Diseñé un sistema de consolidación automática de información operativa y financiera. Dashboard ejecutivo con indicadores clave, reportes automáticos periódicos y eliminación de carga manual recurrente.',
     metricas: [
-      { valor: '−80%', label: 'Tiempo de reportes' },
-      { valor: '3', label: 'Sucursales integradas' },
-      { valor: 'Diario', label: 'Reporting automático' },
+      { valor: 'Semanal', label: 'Reporting sin intervención manual' },
+      { valor: 'Unificada', label: 'Visibilidad sobre el negocio' },
+      { valor: 'Menor', label: 'Dependencia de personas clave' },
     ],
   },
 ]
@@ -54,7 +57,7 @@ export default function Casos() {
       <div className="max-w-6xl mx-auto px-6">
         <FadeIn>
           <p className="font-inter text-xs text-tinta-400 tracking-label uppercase mb-12">
-            Casos de estudio
+            Tipos de trabajo
           </p>
         </FadeIn>
 
@@ -63,7 +66,7 @@ export default function Casos() {
           <div className="flex flex-wrap gap-2 mb-14">
             {casos.map((c, i) => (
               <button
-                key={c.industria}
+                key={c.tipo}
                 onClick={() => setActive(i)}
                 className={`font-inter text-sm px-4 py-2 rounded-sm transition-colors ${
                   active === i
@@ -71,27 +74,35 @@ export default function Casos() {
                     : 'text-tinta-400 border border-crema-300 hover:border-tinta-400'
                 }`}
               >
-                {c.industria}
+                {c.tipo}
               </button>
             ))}
           </div>
         </FadeIn>
 
-        {/* Contenido del caso */}
-        <div
-          key={active}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start"
-        >
+        {/* Contenido */}
+        <div key={active} className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+
           {/* Narrativa */}
           <div>
+            <p className="font-inter text-xs text-tinta-500 uppercase tracking-label mb-4">
+              {caso.contexto}
+            </p>
             <h2 className="font-fraunces text-2xl md:text-3xl text-tinta-100 leading-tight mb-8">
               {caso.titulo}
             </h2>
-            {caso.parrafos.map((p, i) => (
-              <p key={i} className="font-inter text-base text-tinta-400 leading-relaxed mb-6 last:mb-0">
-                {p}
-              </p>
-            ))}
+            <div className="space-y-1 mb-6">
+              <p className="font-inter text-xs text-tinta-500 uppercase tracking-label">El problema</p>
+            </div>
+            <p className="font-inter text-base text-tinta-400 leading-relaxed mb-8">
+              {caso.problema}
+            </p>
+            <div className="space-y-1 mb-4">
+              <p className="font-inter text-xs text-tinta-500 uppercase tracking-label">La solución</p>
+            </div>
+            <p className="font-inter text-base text-tinta-400 leading-relaxed">
+              {caso.solucion}
+            </p>
           </div>
 
           {/* Métricas + CTA */}
@@ -99,7 +110,7 @@ export default function Casos() {
             <div className="grid grid-cols-3 gap-px bg-crema-300 mb-8">
               {caso.metricas.map((m) => (
                 <div key={m.label} className="bg-crema-200 p-6 text-center">
-                  <p className="font-fraunces text-3xl md:text-4xl text-ocre mb-2">{m.valor}</p>
+                  <p className="font-fraunces text-2xl md:text-3xl text-ocre mb-2 leading-tight">{m.valor}</p>
                   <p className="font-inter text-xs text-tinta-400 leading-snug">{m.label}</p>
                 </div>
               ))}
@@ -112,6 +123,7 @@ export default function Casos() {
               <span aria-hidden="true" className="text-ocre">→</span>
             </a>
           </div>
+
         </div>
       </div>
     </section>
