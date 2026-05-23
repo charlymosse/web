@@ -35,14 +35,14 @@ const pasos = [
 
 export default function ComoTrabajo() {
   return (
-    <section id="como-trabajo" className="bg-crema-100 py-24 md:py-36">
+    <section id="como-trabajo" className="bg-crema-100 py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 lg:gap-24">
 
           {/* Header */}
           <div>
             <FadeIn>
-              <p className="font-inter text-xs text-tinta-400 tracking-label uppercase mb-6">
+              <p className="font-inter text-xs text-tinta-500 tracking-label uppercase mb-6">
                 Cómo trabajo
               </p>
               <p className="font-fraunces text-2xl md:text-3xl text-tinta-100 leading-snug">
@@ -55,7 +55,7 @@ export default function ComoTrabajo() {
           <div className="space-y-0 divide-y divide-crema-300">
             {pasos.map((paso, i) => (
               <FadeIn key={paso.numero} delay={(i % 3) as 0 | 1 | 2}>
-                <div className="flex gap-8 py-8 first:pt-0 last:pb-0">
+                <div className="flex gap-8 py-6 first:pt-0 last:pb-0">
                   <span className="font-fraunces text-4xl text-crema-300 leading-none select-none flex-shrink-0 w-12">
                     {paso.numero}
                   </span>

@@ -8,16 +8,19 @@ export default function Hero() {
 
           {/* Texto */}
           <div className="max-w-2xl">
-            <p className="font-inter text-xs text-tinta-400 tracking-label uppercase mb-10">
+            <p className="font-inter text-xs text-tinta-500 tracking-label uppercase mb-8">
               Consultoría de Operaciones · Sistemas · Workflows
             </p>
 
-            <h1 className="font-fraunces text-4xl md:text-6xl lg:text-7xl text-tinta-100 leading-[1.08] tracking-tight mb-8">
-              Empresas que crecieron más rápido que sus procesos.{' '}
-              <em className="text-ocre italic">Eso se puede resolver.</em>
+            <h1 className="font-fraunces text-4xl md:text-6xl lg:text-7xl text-tinta-100 leading-[1.08] tracking-tight mb-4">
+              Empresas que crecieron más rápido que sus procesos.
             </h1>
 
-            <p className="font-inter text-lg md:text-xl text-tinta-400 leading-relaxed max-w-xl mb-12">
+            <p className="font-fraunces text-xl md:text-2xl text-ocre font-light leading-snug mb-8">
+              Eso se puede resolver.
+            </p>
+
+            <p className="font-inter text-base md:text-lg text-tinta-400 leading-relaxed max-w-xl mb-10">
               Trabajo con founders y equipos operativos para ordenar la operación, conectar la
               información y construir sistemas que le dan visibilidad real al negocio.
             </p>
@@ -37,6 +40,13 @@ export default function Hero() {
               >
                 Ver cómo trabajo
               </a>
+            </div>
+
+            <div className="mt-8 flex items-center gap-3">
+              <div className="w-4 h-px bg-tinta-400 opacity-40"></div>
+              <p className="font-inter text-xs text-tinta-500">
+                7 años en operaciones globales · TheFork, TripAdvisor · 12 mercados
+              </p>
             </div>
           </div>
 

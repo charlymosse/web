@@ -3,7 +3,7 @@ import FadeIn from './FadeIn'
 
 export default function SobreMi() {
   return (
-    <section id="sobre-mi" className="bg-crema-200 py-24 md:py-36">
+    <section id="sobre-mi" className="bg-crema-200 py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-12 md:gap-20 items-start">
 
@@ -23,7 +23,7 @@ export default function SobreMi() {
           {/* Bio */}
           <div>
             <FadeIn delay={1}>
-              <p className="font-inter text-xs text-tinta-400 tracking-label uppercase mb-8">
+              <p className="font-inter text-xs text-tinta-500 tracking-label uppercase mb-8">
                 — Sobre mí
               </p>
               <p className="font-fraunces text-2xl md:text-3xl text-tinta-100 leading-[1.3] mb-8">
@@ -33,7 +33,7 @@ export default function SobreMi() {
             </FadeIn>
 
             <FadeIn delay={2}>
-              <p className="font-inter text-base text-tinta-400 leading-relaxed mb-6">
+              <p className="font-inter text-base text-tinta-300 leading-relaxed mb-6">
                 Durante más de seis años lideré equipos de operaciones globales en TheFork
                 (TripAdvisor): calidad, fraude, onboarding y administración en 12 mercados con
                 equipos de más de 30 personas. Ahí diseñé procesos, automaticé workflows y

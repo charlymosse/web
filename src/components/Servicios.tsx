@@ -25,10 +25,10 @@ const servicios = [
 
 export default function Servicios() {
   return (
-    <section id="servicios" className="bg-crema-100 py-24 md:py-36">
+    <section id="servicios" className="bg-crema-100 py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-6">
         <FadeIn>
-          <p className="font-inter text-xs text-tinta-400 tracking-label uppercase mb-16">
+          <p className="font-inter text-xs text-tinta-500 tracking-label uppercase mb-12">
             Servicios
           </p>
         </FadeIn>

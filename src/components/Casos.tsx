@@ -59,10 +59,10 @@ export default function Casos() {
   const caso = casos[active]
 
   return (
-    <section id="caso" className="bg-crema-200 py-24 md:py-36">
+    <section id="caso" className="bg-crema-200 py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-6">
         <FadeIn>
-          <p className="font-inter text-xs text-tinta-400 tracking-label uppercase mb-12">
+          <p className="font-inter text-xs text-tinta-500 tracking-label uppercase mb-10">
             Tipos de trabajo
           </p>
         </FadeIn>
@@ -130,11 +130,11 @@ export default function Casos() {
           <div>
             <div className="grid grid-cols-3 gap-px bg-crema-300 mb-8">
               {caso.metricas.map((m) => (
-                <div key={m.label} className="bg-crema-200 p-6 text-center">
-                  <p className="font-fraunces text-2xl md:text-3xl text-ocre mb-2 leading-tight">
+                <div key={m.label} className="bg-crema-200 p-3 sm:p-5 text-center">
+                  <p className="font-fraunces text-lg sm:text-2xl md:text-3xl text-ocre mb-1.5 leading-tight break-words hyphens-auto">
                     {m.valor}
                   </p>
-                  <p className="font-inter text-xs text-tinta-400 leading-snug">{m.label}</p>
+                  <p className="font-inter text-[10px] sm:text-xs text-tinta-400 leading-snug">{m.label}</p>
                 </div>
               ))}
             </div>

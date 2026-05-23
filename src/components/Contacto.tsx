@@ -3,19 +3,24 @@ import FadeIn from './FadeIn'
 export default function Contacto() {
   return (
     <section id="contacto" className="bg-tinta-100">
-      <div className="max-w-6xl mx-auto px-6 py-24 md:py-36">
+      <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
         <div className="max-w-2xl">
           <FadeIn>
-            <h2 className="font-fraunces text-3xl md:text-5xl text-crema-100 leading-[1.2] mb-8">
-              Si sentís que tu operación está atada con alambre,{' '}
-              <em className="text-ocre italic">hablemos 30 minutos.</em>
+            <p className="font-inter text-xs text-tinta-400 tracking-label uppercase mb-8">
+              — Contacto
+            </p>
+            <h2 className="font-fraunces text-3xl md:text-4xl text-crema-100 leading-[1.25] mb-8">
+              ¿Qué parte de tu operación todavía{' '}
+              <em className="text-ocre italic">depende de que alguien lo recuerde?</em>
             </h2>
           </FadeIn>
 
           <FadeIn delay={1}>
-            <p className="font-inter text-base text-tinta-500 leading-relaxed mb-12">
-              Llamada sin compromiso. Te cuento si puedo ayudarte y, si no, te oriento hacia
-              quien sí.
+            <p className="font-inter text-base text-tinta-500 leading-relaxed mb-3">
+              Hablemos 30 minutos. Sin PowerPoints, sin propuestas genéricas.
+            </p>
+            <p className="font-inter text-sm text-tinta-500 leading-relaxed mb-10">
+              Si no puedo ayudarte, te digo dónde buscar.
             </p>
           </FadeIn>
 

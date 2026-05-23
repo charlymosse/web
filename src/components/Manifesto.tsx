@@ -2,11 +2,11 @@ import FadeIn from './FadeIn'
 
 export default function Manifesto() {
   return (
-    <section className="bg-crema-100 py-24 md:py-36">
+    <section className="bg-crema-100 py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-2xl">
           <FadeIn>
-            <p className="font-inter text-xs text-tinta-400 tracking-label uppercase mb-10">
+            <p className="font-inter text-xs text-tinta-500 tracking-label uppercase mb-8">
               — El problema
             </p>
           </FadeIn>
@@ -20,7 +20,7 @@ export default function Manifesto() {
           </FadeIn>
 
           <FadeIn delay={2}>
-            <p className="font-inter text-base md:text-lg text-tinta-400 leading-relaxed">
+            <p className="font-inter text-base md:text-lg text-tinta-300 leading-relaxed">
               La información está dispersa en mails, WhatsApps y Excels. Los procesos son
               informales. Cuando alguien falta, el trabajo se traba. Y no es falta de
               herramientas: es falta de sistema.

@@ -12,10 +12,10 @@ const industrias = [
 
 export default function Industrias() {
   return (
-    <section className="bg-crema-100 py-24 md:py-36">
+    <section className="bg-crema-100 py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-6">
         <FadeIn>
-          <p className="font-inter text-xs text-tinta-400 tracking-label uppercase mb-16">
+          <p className="font-inter text-xs text-tinta-500 tracking-label uppercase mb-10">
             Industrias
           </p>
         </FadeIn>
@@ -25,7 +25,7 @@ export default function Industrias() {
             {industrias.map((ind) => (
               <span
                 key={ind}
-                className="font-inter text-sm text-tinta-300 border border-crema-300 px-4 py-2 rounded-full"
+                className="font-inter text-sm text-tinta-400 border border-crema-300 px-4 py-2 rounded-sm"
               >
                 {ind}
               </span>
