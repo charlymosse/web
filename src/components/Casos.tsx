@@ -63,7 +63,7 @@ export default function Casos() {
       <div className="max-w-6xl mx-auto px-6">
         <FadeIn>
           <p className="font-inter text-xs text-tinta-500 tracking-label uppercase mb-10">
-            Tipos de trabajo
+            — Tipos de trabajo
           </p>
         </FadeIn>
 
@@ -91,7 +91,7 @@ export default function Casos() {
 
           {/* Narrativa */}
           <div>
-            <p className="font-inter text-xs text-tinta-500 uppercase tracking-label mb-5">
+            <p className="font-inter text-xs text-tinta-500 italic mb-5">
               {caso.contexto}
             </p>
             <h2 className="font-fraunces text-2xl md:text-3xl text-tinta-100 leading-tight mb-10">
@@ -140,11 +140,14 @@ export default function Casos() {
             </div>
             <a
               href="#contacto"
-              className="font-inter text-sm text-tinta-100 hover:text-ocre transition-colors flex items-center gap-2"
+              className="font-inter text-sm text-tinta-100 hover:text-ocre transition-colors flex items-center gap-2 mb-6"
             >
               Hablemos de tu caso{' '}
               <span aria-hidden="true" className="text-ocre">→</span>
             </a>
+            <p className="font-inter text-xs text-tinta-500">
+              También: Servicios profesionales · Operaciones comerciales · E-commerce
+            </p>
           </div>
 
         </div>

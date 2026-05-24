@@ -25,20 +25,20 @@ export default function Contacto() {
           </FadeIn>
 
           <FadeIn delay={2}>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row items-center gap-5">
               <a
                 href="https://calendar.app.google/qdLJ6dHvgA4e8zSXA"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-inter text-sm font-medium bg-ocre text-crema-100 px-7 py-3.5 rounded-sm hover:bg-ocre-hover transition-colors text-center"
+                className="font-inter text-sm font-medium bg-ocre text-crema-100 px-7 py-3.5 rounded-sm hover:bg-ocre-hover transition-colors text-center w-full sm:w-auto"
               >
                 Agendar llamada
               </a>
               <a
                 href="mailto:charly.mosse@gmail.com"
-                className="font-inter text-sm font-medium text-crema-100 border border-tinta-300 px-7 py-3.5 rounded-sm hover:border-crema-300 transition-colors text-center"
+                className="font-inter text-sm text-tinta-500 hover:text-crema-100 transition-colors"
               >
-                charly.mosse@gmail.com
+                o escribime: charly.mosse@gmail.com
               </a>
             </div>
           </FadeIn>
@@ -47,25 +47,47 @@ export default function Contacto() {
 
       {/* Footer */}
       <footer className="border-t border-tinta-200">
-        <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-inter text-xs text-tinta-400">
-            © 2026 Charly Mosse · Buenos Aires
-          </p>
-          <div className="flex items-center gap-6">
-            <a
-              href="https://www.linkedin.com/in/charlymosse/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-inter text-xs text-tinta-400 hover:text-crema-100 transition-colors"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="mailto:charly.mosse@gmail.com"
-              className="font-inter text-xs text-tinta-400 hover:text-crema-100 transition-colors"
-            >
-              Email
-            </a>
+        <div className="max-w-6xl mx-auto px-6 py-8">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+            {/* Quick nav */}
+            <div className="flex flex-wrap gap-x-6 gap-y-2">
+              {[
+                { label: 'Cómo trabajo', href: '#como-trabajo' },
+                { label: 'Casos', href: '#caso' },
+                { label: 'Servicios', href: '#servicios' },
+                { label: 'Sobre mí', href: '#sobre-mi' },
+              ].map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="font-inter text-xs text-tinta-400 hover:text-crema-100 transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+            {/* Social */}
+            <div className="flex items-center gap-6">
+              <a
+                href="https://www.linkedin.com/in/charlymosse/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-inter text-xs text-tinta-400 hover:text-crema-100 transition-colors"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="mailto:charly.mosse@gmail.com"
+                className="font-inter text-xs text-tinta-400 hover:text-crema-100 transition-colors"
+              >
+                Email
+              </a>
+            </div>
+          </div>
+          <div className="border-t border-tinta-200 pt-4">
+            <p className="font-inter text-xs text-tinta-400">
+              © 2026 Charly Mosse · Buenos Aires
+            </p>
           </div>
         </div>
       </footer>

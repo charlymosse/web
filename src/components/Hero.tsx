@@ -25,20 +25,20 @@ export default function Hero() {
               información y construir sistemas que le dan visibilidad real al negocio.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row items-center gap-5">
               <a
                 href="https://calendar.app.google/qdLJ6dHvgA4e8zSXA"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-inter text-sm font-medium bg-tinta-100 text-crema-100 px-7 py-3.5 rounded-sm hover:bg-ocre transition-colors text-center"
+                className="font-inter text-sm font-medium bg-tinta-100 text-crema-100 px-7 py-3.5 rounded-sm hover:bg-ocre transition-colors text-center w-full sm:w-auto"
               >
                 Hablemos de tu operación
               </a>
               <a
                 href="#como-trabajo"
-                className="font-inter text-sm font-medium text-tinta-100 border border-tinta-300 px-7 py-3.5 rounded-sm hover:border-tinta-100 transition-colors text-center"
+                className="font-inter text-sm text-tinta-400 hover:text-tinta-100 transition-colors flex items-center gap-1.5"
               >
-                Ver cómo trabajo
+                Ver cómo trabajo <span className="text-tinta-500">↓</span>
               </a>
             </div>
 
@@ -66,12 +66,19 @@ export default function Hero() {
 
         </div>
 
-        {/* Línea decorativa */}
-        <div className="mt-24 md:mt-32 flex items-center gap-6">
-          <div className="w-12 h-px bg-ocre"></div>
-          <p className="font-inter text-xs text-tinta-500 tracking-label uppercase">
-            Buenos Aires · Latam
-          </p>
+        {/* Línea decorativa + scroll hint */}
+        <div className="mt-24 md:mt-32">
+          <div className="flex items-center gap-6 mb-5">
+            <div className="w-12 h-px bg-ocre"></div>
+            <p className="font-inter text-xs text-tinta-500 tracking-label uppercase">
+              Buenos Aires · Latam
+            </p>
+          </div>
+          <div className="animate-bounce opacity-25 w-4">
+            <svg viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 2v20M2 16l6 6 6-6" stroke="#1A1815" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
         </div>
       </div>
     </section>

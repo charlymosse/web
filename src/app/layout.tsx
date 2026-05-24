@@ -18,15 +18,23 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Charly Mosse — Consultoría de Operaciones y Automatización',
+  metadataBase: new URL('https://charlymosse.com.ar'),
+  title: 'Charly Mosse — Consultoría de Operaciones y Sistemas',
   description:
-    'Ayudo a founders de empresas que crecieron rápido a ordenar su operación con sistemas, datos y automatización. No vendo PowerPoints: construyo lo que diseño.',
+    'Trabajo con founders y equipos operativos para ordenar la operación, conectar la información y construir sistemas que le dan visibilidad real al negocio.',
   openGraph: {
-    title: 'Charly Mosse — Consultoría de Operaciones y Automatización',
+    title: 'Charly Mosse — Consultoría de Operaciones y Sistemas',
     description:
-      'Ayudo a founders de empresas que crecieron rápido a ordenar su operación con sistemas, datos y automatización.',
+      'Trabajo con founders y equipos operativos para ordenar la operación, conectar la información y construir sistemas que le dan visibilidad real al negocio.',
     locale: 'es_AR',
     type: 'website',
+    url: 'https://charlymosse.com.ar',
+    siteName: 'Charly Mosse',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Charly Mosse — Consultoría de Operaciones y Sistemas',
+    description: 'Empresas que crecieron más rápido que sus procesos. Eso se puede resolver.',
   },
 }
 

@@ -12,11 +12,32 @@ const links = [
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('')
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    const sectionIds = links.map((l) => l.href.replace('#', ''))
+    const observers: IntersectionObserver[] = []
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id)
+      if (!el) return
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveSection(id)
+        },
+        { threshold: 0.3, rootMargin: '-72px 0px -40% 0px' }
+      )
+      observer.observe(el)
+      observers.push(observer)
+    })
+
+    return () => observers.forEach((o) => o.disconnect())
   }, [])
 
   return (
@@ -37,15 +58,26 @@ export default function Nav() {
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="font-inter text-sm text-tinta-400 hover:text-tinta-100 transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
+          {links.map((link) => {
+            const id = link.href.replace('#', '')
+            const isActive = activeSection === id
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`font-inter text-sm transition-colors relative ${
+                  isActive
+                    ? 'text-tinta-100'
+                    : 'text-tinta-400 hover:text-tinta-100'
+                }`}
+              >
+                {link.label}
+                {isActive && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-px bg-ocre" />
+                )}
+              </a>
+            )
+          })}
           <a
             href="#contacto"
             className="font-inter text-sm bg-tinta-100 text-crema-100 px-4 py-2 rounded-sm hover:bg-tinta-200 transition-colors"
@@ -62,7 +94,7 @@ export default function Nav() {
         >
           <span className="block w-5 h-px bg-tinta-100 mb-1.5"></span>
           <span className="block w-5 h-px bg-tinta-100 mb-1.5"></span>
-          <span className="block w-3 h-px bg-tinta-100"></span>
+          <span className="block w-5 h-px bg-tinta-100"></span>
         </button>
       </nav>
 

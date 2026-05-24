@@ -29,7 +29,7 @@ export default function Servicios() {
       <div className="max-w-6xl mx-auto px-6">
         <FadeIn>
           <p className="font-inter text-xs text-tinta-500 tracking-label uppercase mb-12">
-            Servicios
+            — Servicios
           </p>
         </FadeIn>
 

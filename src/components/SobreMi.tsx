@@ -9,7 +9,7 @@ export default function SobreMi() {
 
           {/* Foto */}
           <FadeIn>
-            <div className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden flex-shrink-0">
+            <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden flex-shrink-0">
               <Image
                 src="/charlymosse.jpg"
                 alt="Charly Mosse"

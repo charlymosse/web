@@ -43,7 +43,7 @@ export default function ComoTrabajo() {
           <div>
             <FadeIn>
               <p className="font-inter text-xs text-tinta-500 tracking-label uppercase mb-6">
-                Cómo trabajo
+                — Cómo trabajo
               </p>
               <p className="font-fraunces text-2xl md:text-3xl text-tinta-100 leading-snug">
                 Un proceso claro, de diagnóstico a sistema funcionando.
@@ -56,7 +56,7 @@ export default function ComoTrabajo() {
             {pasos.map((paso, i) => (
               <FadeIn key={paso.numero} delay={(i % 3) as 0 | 1 | 2}>
                 <div className="flex gap-8 py-6 first:pt-0 last:pb-0">
-                  <span className="font-fraunces text-4xl text-crema-300 leading-none select-none flex-shrink-0 w-12">
+                  <span className="font-fraunces text-4xl text-tinta-400 leading-none select-none flex-shrink-0 w-12 opacity-40">
                     {paso.numero}
                   </span>
                   <div>

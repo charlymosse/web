@@ -25,7 +25,7 @@ export default function Stack() {
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-24 mb-14">
             <div>
               <p className="font-inter text-xs text-tinta-500 tracking-label uppercase mb-6">
-                Herramientas
+                — Herramientas
               </p>
               <p className="font-fraunces text-2xl md:text-3xl text-tinta-100 leading-snug">
                 Herramientas que potencian los sistemas.

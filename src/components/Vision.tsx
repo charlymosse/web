@@ -2,13 +2,13 @@ import FadeIn from './FadeIn'
 
 export default function Vision() {
   return (
-    <section className="bg-crema-100 py-20 md:py-28">
+    <section className="bg-crema-200 py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-16 lg:gap-24 items-start">
 
           <FadeIn>
             <p className="font-inter text-xs text-tinta-500 tracking-label uppercase mb-8">
-              — De qué se trata
+              — Mi enfoque
             </p>
             <p className="font-fraunces text-2xl md:text-3xl text-tinta-100 leading-[1.3]">
               Trabajo con empresas que sienten que su operación empezó a volverse más compleja
